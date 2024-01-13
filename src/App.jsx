@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Background from "./Components/Background/Background.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Hero from "./Components/Hero/Hero.jsx";
@@ -10,27 +10,34 @@ const App = () => {
     },
     {
       text1: "Indulge",
-      text2: "Your Passions",
+      text2: "Your Passion",
     },
     {
-      text1: "Give into",
-      text2: "Your passion",
+      text1: "Give in to",
+      text2: "Your Passions",
     },
   ];
   const [heroCount, setHeroCount] = useState(2);
   const [playStatus, setPlayStatus] = useState(false);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setHeroCount((count) => {
+  //       return count === 2 ? 0 : count + 1;
+  //     });
+  //   }, 3000);
+  // }, []);
   return (
-    <div>
-      <Background playStatus={playStatus} heroCount={heroCount} />
+    <>
       <Navbar />
+      <Background playStatus={playStatus} heroCount={heroCount} />
       <Hero
         setPlayStatus={setPlayStatus}
-        heroData={heroData[heroCount]}
         heroCount={heroCount}
-        setHeroCount={setHeroCount}
         playStatus={playStatus}
+        heroData={heroData[heroCount]}
+        setHeroCount={setHeroCount}
       />
-    </div>
+    </>
   );
 };
 

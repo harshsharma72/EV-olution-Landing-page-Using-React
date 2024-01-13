@@ -1,20 +1,21 @@
-.hero{
-    margin: 10px 120px;
+.Hero{
+    margin: 0px 120px;
+    margin-top: 100px;
 }
 .hero-text{
     color: #fff;
     font-size: 60px;
     font-weight: 500;
-    line-height: 50px;
+    /* line-height: 20px; */
 }
 .hero-explore{
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: fit-content;
-    margin-top: 70px;
+    margin-top: 50px;
     padding: 5px 8px;
-    padding-left: 30px;
+    padding: 20px;
     border-radius: 60px;
     background-color: #fff;
     cursor: pointer;
@@ -36,21 +37,22 @@
     list-style: none;
 }
 .hero-dot{
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    background: #fff;
     border-radius: 50%;
     cursor: pointer;
 }
-.orange{
-    background-color: orangered;
+.hero-dot.orange{
+    background: orangered;
 }
 .hero-play{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 .hero-play p{
     color: #fff;
-    font-size: 18px;
+    font-weight: 500;
 }
